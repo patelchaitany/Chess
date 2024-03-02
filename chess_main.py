@@ -25,7 +25,7 @@ def main():
     run = True
     sqselected = ()
     playerclick = []
-    validMoves = gs.getvalidMove()
+    validMoves = gs.getValidMoves()
     moveMade = False
 
     while run:
@@ -73,7 +73,7 @@ def main():
                     moveMade = True
                     print("*"*30)
             if moveMade:
-                validMoves = gs.getvalidMove()
+                validMoves = gs.getValidMoves()
                 moveMade = False
 
         if (len(sqselected)==0 and len(playerclick)==0):
