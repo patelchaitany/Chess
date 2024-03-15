@@ -193,6 +193,7 @@ class GameState:
             self.stalemate = False
 
         self.current_castling_rights = temp_castle_rights
+               
         return moves
 
     def inCheck(self):
@@ -488,6 +489,12 @@ class GameState:
             if not self.squareUnderAttack(row, col - 1) and not self.squareUnderAttack(row, col - 2):
                 moves.append(Move((row, col), (row, col - 2), self.board, is_castle_move=True))
 
+
+    def print_board(self):
+        for row in self.board:
+            for piece in row:
+                print(piece, end=" ")
+            print()
 
 class CastleRights:
     def __init__(self, wks, bks, wqs, bqs):
